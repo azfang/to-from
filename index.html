@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive Image Map with Pannellum</title>
+  <script src="https://cdn.jsdelivr.net/npm/pannellum/build/pannellum.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pannellum/build/pannellum.css">
+  <style>
+    #panorama {
+      height: 100vh;
+      width: 100%;
+    }
+    /* Custom style for hotspot text */
+    .pnlm-hotspot-base.pnlm-hotspot-info div {
+      background-color: rgba(0, 0, 0, 0.7); /* Black semi-transparent background */
+      color: white; /* White text */
+      font-size: 14px; /* Adjust text size */
+      padding: 5px 10px; /* Add some padding */
+      border-radius: 5px; /* Rounded corners */
+      font-family: 'Times New Roman', Times, serif; /* Font style */
+    }
+
+    .pnlm-hotspot-base.pnlm-hotspot-info div:hover {
+      background-color: rgba(255, 255, 255, 0.9); /* Change to white on hover */
+      color: black; /* Change text to black on hover */
+      font-family: 'Times New Roman', Times, serif; /* Font style */
+    }
+  </style>
+</head>
+<body>
+  <div id="panorama"></div>
+
+  <script>
+    // Initialize the Pannellum viewer
+    pannellum.viewer('panorama', {
+      type: 'equirectangular',
+      panorama: 'diagram2.png', // Path to the uploaded image
+      autoLoad: true,
+      compass: false,
+      pitch: 0,
+      yaw: 0,
+      hfov: 100, // Horizontal field of view
+      showControls: false, // Disable controls
+    });
+  </script>
+</body>
+</html>

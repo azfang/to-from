@@ -12,7 +12,7 @@
       padding: 0;
     }
 
-    #loader {
+/*     #loader {
     position: fixed;
     top: 50%;
     left: 50%;
@@ -24,7 +24,7 @@
     padding: 10px 20px;
     border-radius: 5px;
     z-index: 1000;
-    }
+    } */
     
     #panorama {
       height: 100vh;
@@ -53,18 +53,18 @@
 
   <script>
 
-    const panorama = document.getElementById('panorama');
-    const loader = document.getElementById('loader');
+    // const panorama = document.getElementById('panorama');
+    // const loader = document.getElementById('loader');
 
-    panorama.addEventListener('load', () => {
-    loader.style.display = 'none';
-    });
+    // panorama.addEventListener('load', () => {
+    // loader.style.display = 'none';
+    // });
     
     // Initialize the Pannellum viewer
     pannellum.viewer('panorama', {
       type: 'equirectangular',
       panorama: 'diagram2.png', // Path to the uploaded image
-      autoLoad: true,
+      autoLoad: false,
       compass: false,
       pitch: 0,
       yaw: 0,
